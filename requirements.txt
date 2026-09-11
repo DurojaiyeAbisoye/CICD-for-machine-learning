@@ -1,2 +1,4 @@
 scikit-learn
 skops
+huggingface-hub
+huggingface-cli

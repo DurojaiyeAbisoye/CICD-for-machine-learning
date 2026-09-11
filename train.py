@@ -8,7 +8,8 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.metrics import accuracy_score, f1_score
 import matplotlib.pyplot as plt
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
-import skops.io as sio, get_untrusted_types
+import skops.io as sio
+from skops.io import get_untrusted_types
 
 
 
