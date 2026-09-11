@@ -1,3 +1,2 @@
 scikit-learn
 skops
-huggingface-hub

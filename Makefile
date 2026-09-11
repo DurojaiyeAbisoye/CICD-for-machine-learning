@@ -1,16 +1,15 @@
 install:
-    pip install --upgrade pip &&\
-        pip install -r requirements.txt
+	pip install --upgrade pip && \
+		pip install -r requirements.txt
+
 format:
 	black *.py
 
 eval:
 	echo '## Model metrics' > report.md
 	cat ./results/metrics.txt >> report.md
-
 	echo '\n## Confusion Matrix Plot' >> report.md
 	echo '![Confusion Matrix](./results/confusion_matrix.png)' >> report.md
-
 	cml comment create report.md
 
 update-branch:
@@ -30,5 +29,4 @@ push-hub:
 	huggingface-cli upload kingabzpro/Drug-Classification ./Model /Model --repo-type=space --commit-message="Sync Model"
 	huggingface-cli upload kingabzpro/Drug-Classification ./Results /Metrics --repo-type=space --commit-message="Sync Model"
 
-deploy: 
-	hf-login push-hub
+deploy: hf-login push-hub
